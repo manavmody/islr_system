@@ -1,0 +1,175 @@
+
+   
+  /* Style App.js wrapper */
+  .App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+    justify-content: center;
+    overflow: hidden;
+  }
+   
+  /* Tab Container */
+  .Tabs {
+    width: 80%;
+    height: auto;
+    min-height: 700px;
+    background: #053742;
+    margin: 3.5rem auto 1.5rem;
+    padding: 2rem 1rem;
+    color: #E8F0F2;
+    border-radius: 2rem;
+    @media (max-width: 769px) {
+      padding: 2rem 0;
+    }
+   
+  }
+   
+  /* Tab Navigation */
+  ul.nav {
+    width: 60%;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #39A2DB;
+    border-radius: 2rem;
+    padding-left: 0px;
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+  }
+   
+  ul.nav li {
+    width: 50%;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+  }
+   
+  ul.nav li:first-child {
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
+   
+  ul.nav li:last-child {
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+   
+  ul.nav li:hover {
+    background: rgba(50, 224, 196, 0.15);
+  }
+   
+  ul.nav li.active {
+    background: #39A2DB;
+  }
+   /* YOUTUBE VIDEO CSS */
+  .ratio {
+    position: relative;
+  }
+  
+  .ratio::before {
+    content: '';
+    display: block;
+    padding-bottom: var(--bs-aspect-ratio, 50%);
+  }
+  
+  .ratio > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+  }
+
+  /* flipping card css code */
+
+  /* .card {
+    width: 100px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.6s ease;
+  }
+  
+  .card.flipped {
+    transform: rotateY(360deg);
+  }
+  
+  .card .front,
+  .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .card .front {
+    background-color: #f1c40f;
+    color: white;
+  }
+  
+  .card .back {
+    background-color: #e74c3c;
+    color: white;
+    transform: rotateY(360deg);
+  } */
+
+  /* rearraning in 3x3 grid */
+  .card-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 50%; 
+    margin: 0 auto;
+  }
+  
+  .card {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    /* padding-bottom: 100%; */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform-style: preserve-3d;
+  }
+  
+  .card.flipped {
+    transform: rotateY(360deg);
+  }
+  
+  .card .front,
+  .card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card .back {
+    background-color: #e74c3c;
+    color: white;
+    transform: rotateY(360deg);
+  }
