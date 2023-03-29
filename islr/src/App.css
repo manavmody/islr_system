@@ -228,3 +228,36 @@
     flex-direction: row;
     flex-wrap:wrap
 }
+.button2 {
+  background-color: #4CAF50; /* Set the background color of the button */
+  border: none; /* Remove the border around the button */
+  color: white; /* Set the text color of the button */
+  padding: 12px 24px; /* Set the padding of the button */
+  text-align: center; /* Center the text within the button */
+  text-decoration: none; /* Remove any text decoration */
+  display: inline-block; /* Display the button as an inline-block element */
+  font-size: 16px; /* Set the font size of the button */
+  border-radius: 4px; /* Add rounded corners to the button */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+.button2:hover {
+  background-color: #3e8e41; /* Change the background color of the button on hover */
+}
+
+.blinking-text {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

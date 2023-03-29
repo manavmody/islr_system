@@ -59,18 +59,20 @@ const Review = () => {
             <h2 style={{paddingBottom:"10px",paddingTop:"10px"}}>Question {currentQuestion + 1}</h2>
           
           <p ><iframe src={questions[currentQuestion].src} title="YouTube video" allowfullscreen ></iframe></p>
-                
-          {questions[currentQuestion].options.map((option, index) => (
-            <button key={index} onClick={() => handleAnswerClick(option)}>
-              {option}
-            </button>
-          ))}
+                <div className="flex-container" >
+                {questions[currentQuestion].options.map((option, index) => (
+                  <ul>
+                  <button className="button" key={index} onClick={() => handleAnswerClick(option)}> {option} </button>  
+                </ul>
+                ))}
+                </div>
+          
           <br />
          
 
          
-          {feedback ? <p >{feedback}</p> : <br/>}
-          <button className="button" onClick={handleNextQuestionClick}>Next</button>
+          {feedback ? <p className="blinking-text">{feedback}</p> : <br/>}
+          <button className="button2" onClick={handleNextQuestionClick}>Next</button>
         </div>
       );
 }

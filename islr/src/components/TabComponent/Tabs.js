@@ -10,7 +10,8 @@ const Tabs = () => {
  
   return (
     <div className="Tabs">
-    <h2 style={{ textAlign: 'center' }}>WELCOME TO PRJASOMA</h2>
+    <div class="content"> <h2 style={{ textAlign: 'center' }}>WELCOME TO PRJASOMA</h2></div>
+   
       <ul className="nav">
         <TabNavItem title="Words" id="tab1" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Sentences" id="tab2" activeTab={activeTab} setActiveTab={setActiveTab}/>
