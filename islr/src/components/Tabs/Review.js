@@ -53,20 +53,24 @@ const Review = () => {
     
       return (
         <div>
-          <h1>Question {currentQuestion + 1}</h1>
+          <h1>{questions[currentQuestion].question}</h1>
           
-          <div style={{paddingBottom:"10px",paddingTop:"10px"}}>
-                    <h2>{questions[currentQuestion].question}</h2>
-                </div>
-                <iframe src={questions[currentQuestion].src} title="YouTube video" allowfullscreen></iframe>
-
+          
+            <h2 style={{paddingBottom:"10px",paddingTop:"10px"}}>Question {currentQuestion + 1}</h2>
+          
+          <p ><iframe src={questions[currentQuestion].src} title="YouTube video" allowfullscreen ></iframe></p>
+                
           {questions[currentQuestion].options.map((option, index) => (
-            <div key={index} onClick={() => handleAnswerClick(option)}>
+            <button key={index} onClick={() => handleAnswerClick(option)}>
               {option}
-            </div>
+            </button>
           ))}
-          {feedback && <p>{feedback}</p>}
-          <button onClick={handleNextQuestionClick}>Next</button>
+          <br />
+         
+
+         
+          {feedback ? <p >{feedback}</p> : <br/>}
+          <button className="button" onClick={handleNextQuestionClick}>Next</button>
         </div>
       );
 }

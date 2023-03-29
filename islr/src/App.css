@@ -9,6 +9,15 @@
     justify-content: center;
     overflow: hidden;
   }
+  p{
+    font-family: Comic Sans MS;
+  }
+  h1{
+    font-family: Comic Sans MS;
+  }
+  h2{
+    font-family: Comic Sans MS;
+  }
    
   /* Tab Container */
   .Tabs {
@@ -173,3 +182,49 @@
     color: white;
     transform: rotateY(360deg);
   }
+
+  /* for button beautification */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    background-color: #f9c5b5;
+    z-index: -1;
+    border-radius: 50px;
+    transform: scale(0.8);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover::before {
+    transform: scale(1);
+  }
+  /* for arranging buttons */
+  .flexbox-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap
+}

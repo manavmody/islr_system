@@ -59,7 +59,7 @@ const SentencesGame= (props) => {
       return (
         <div>
          <p>Identify the following video</p>
-         <p>
+         <p style={{paddingBottom:"20px"}}>
          <iframe src={props.video} title="YouTube video" allowfullscreen></iframe>
          </p>
          {success && <h3>congrats youve answered this question</h3>}
