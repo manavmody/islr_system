@@ -58,11 +58,11 @@ const SentencesGame= (props) => {
     
       return (
         <div>
-         <p>Identify the following video</p>
+         <h1>Identify the following video</h1>
          <p style={{paddingBottom:"20px"}}>
          <iframe src={props.video} title="YouTube video" allowfullscreen></iframe>
          </p>
-         {success && <h3>congrats youve answered this question</h3>}
+         {success && <p className="blinking-text">Congrats you've answered this question !</p>}
              <div className="card-box">
             {cards.map((card) => (
             <div

@@ -48,7 +48,7 @@ const Sentences = () => {
            {questionNumber===1 ? <SentencesGame question={question1} video="https://www.youtube.com/embed/e4lux9dnPcw" next={next} answer={3}/>: null}
            {questionNumber===2 ? <SentencesGame question={question2} video="https://www.youtube.com/embed/1XLi2MXWjGc" next={next} answer={4}/>: null}
            {questionNumber===3 ? <SentencesGame question={question3} video="https://www.youtube.com/embed/d9fEfBJmy0Y" next={next} answer={2}/>: null}
-            {nextbutton && <button onClick={handleNext}>next</button>}
+            {nextbutton && <button className="button2" onClick={handleNext}>NEXT</button>}
         </div>
        
       );
